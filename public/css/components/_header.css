@@ -1,0 +1,118 @@
+.navigation__checkbox {
+  display: none;
+}
+.nvaigation__label {
+  position: fixed;
+  top: 2rem;
+  right: 4rem;
+  height: 7rem;
+  width: 7rem;
+  cursor: pointer;
+  background-color: #ff9f45;
+  border-radius: 50%;
+  z-index: 2000;
+  text-align: center;
+  filter: drop-shadow(2px 4px 6px black);
+}
+.navigation__arrow {
+  position: relative;
+  margin-top: 3.2rem;
+}
+.navigation__arrow,
+.navigation__arrow::before,
+.navigation__arrow::after {
+  width: 3rem;
+  height: 2px;
+  background-color: #fc4f4f;
+  display: inline-block;
+}
+.navigation__arrow::before,
+.navigation__arrow::after {
+  position: absolute;
+  content: "";
+  left: 0;
+}
+.navigation__arrow::before {
+  top: -0.8rem;
+}
+.navigation__arrow::after {
+  top: 0.8rem;
+}
+.navigation__background {
+  position: fixed;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  top: 2.5rem;
+  right: 5rem;
+  background-image: radial-gradient(#ff7f3f, #f6d860, #95cd41);
+  z-index: 1000;
+  transition: all 0.4s;
+}
+.navigation__nav {
+  position: fixed;
+  height: 100vh;
+  width: 0;
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 1500;
+}
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+  list-style: none;
+  /* changes */
+  visibility: hidden;
+}
+.navigation__link {
+  font-size: 4.5rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: #781d42;
+  transition: all 0.4s;
+  margin: 1rem;
+}
+.navigation__link:hover {
+  text-shadow: 1px 5px 10px #a3423c;
+}
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80);
+}
+.navigation__checkbox:checked ~ .navigation__nav > .navigation__list {
+  visibility: visible;
+}
+.navigation__checkbox:checked ~ .navigation__nav {
+  /* width: 100%;
+  opacity: 1; */
+
+  width: 100%;
+  opacity: 1;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.navigation__item {
+  position: relative;
+}
+.navigation__item::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #ff7f3f;
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, -0.01, 0, 1) 0.2s;
+  transform: scaleY(0);
+}
+.navigation__item:hover::before {
+  transform: scaleY(1);
+  width: 100%;
+}
+.navigation__link {
+  position: relative;
+  z-index: 10;
+}

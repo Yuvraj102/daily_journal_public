@@ -1,0 +1,12 @@
+extends base 
+block content 
+    div.create 
+        div.create__content
+            form.create__form(action="/create",method="post",enctype="multipart/form-data") 
+                input.create__form__input(type="text",name="title",id="title", placeholder="title",required)
+                label.create__form__label(for="title") Title here
+                textarea.create__form__input(name="body", rows="10",id="body", placeholder="body", required)
+                label.create__form__label(for="body") Body here
+                input.create__form__input.create__form__input__file(type="file",name="files",accept="image/*",id="files", placeholder="Photos",multiple,max="4")
+                label.create__form__label(for="files") Have you got any photos? max 4
+                button.singInPopup__main__link(type="submit") POST

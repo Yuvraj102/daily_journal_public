@@ -1,0 +1,44 @@
+
+div.post__big 
+    - for(let k=0; k<post.images.length; k++){ 
+            div.post__overlay(id=post.images[k])
+                div.post__img 
+                    a(href="#icon").post__img__cross &times; 
+                    img(src=post.images[k], alt="")
+    - }
+    
+    //- 
+    div.post__big__img 
+        a.post__big__link(href="/profile/"+post.postedPerson.email) 
+            img(src=post.postedPerson.profilePhotoUrl ,alt="placeholder") 
+    div.post__big__textBox 
+        a.post__OwnerProfileLink(href="/profile/"+post.postedPerson.email) 
+            h2= post.postedPerson.displayName
+        p.post__title__big= post.title
+        p= post.body
+        div.post__big__textBox__accessories
+            div.icons 
+                if liked 
+                    svg.icons__icon.heart__icon(id="icon",style="fill:crimson") 
+                        use(xlink:href="/img/sprite.svg#icon-heart")
+                else 
+                    svg.icons__icon.heart__icon(id="icon") 
+                        use(xlink:href="/img/sprite.svg#icon-heart")
+                svg.icons__icon 
+                    use(xlink:href="/img/sprite.svg#icon-typing")
+                svg.icons__icon 
+                    use(xlink:href="/img/sprite.svg#icon-export")
+                if user && user.email == post.postedPerson.email 
+                    div.icons__icon__delete
+                        a(href="/post/delete/"+post._id) 🗑
+            div.post__big__imgs
+                - for(let b=0;b<post.images.length;b++) {
+                    a(href="#"+post.images[b]) 
+                        img.post__big__imgs--1(src=post.images[b], alt="")
+                - }
+                
+                //- img.post__big__imgs--1(src="/img/sample/sample1.jpeg", alt="")
+                //- img.post__big__imgs--2(src="/img/sample/sample2.jpeg", alt="")
+                //- img.post__big__imgs--3(src="/img/sample/sample3.jpeg", alt="")
+                //- img.post__big__imgs--4(src="/img/sample/sample4.jpeg", alt="")
+    

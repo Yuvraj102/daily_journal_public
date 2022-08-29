@@ -1,0 +1,49 @@
+extends base
+block content 
+    div.profile 
+        div.profile__first 
+            div.profile__first__details 
+                img(src=profileUser.profilePhotoUrl, alt="")
+                p Elite Member 
+                    <svg class="profile__badge" version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                        <title>fire</title>
+                        <path d="M10.031 32c-2.133-4.438-0.997-6.981 0.642-9.376 1.795-2.624 2.258-5.221 2.258-5.221s1.411 1.834 0.847 4.703c2.493-2.775 2.963-7.196 2.587-8.889 5.635 3.938 8.043 12.464 4.798 18.783 17.262-9.767 4.294-24.38 2.036-26.027 0.753 1.646 0.895 4.433-0.625 5.785-2.573-9.759-8.937-11.759-8.937-11.759 0.753 5.033-2.728 10.536-6.084 14.648-0.118-2.007-0.243-3.392-1.298-5.312-0.237 3.646-3.023 6.617-3.777 10.27-1.022 4.946 0.765 8.568 7.555 12.394z"></path>
+                    </svg>
+                h2= profileUser.displayName
+                p.profile__email(style="display:none")= profileUser.email
+                if user
+                    p.profile__loggedInEmail(style="display:none")= user.email
+                if user 
+                    button.profile__button(disabled=user?false:true)= followStatus
+                else 
+                    button.profile__button(disabled=user?false:true) FOLLOW
+                //- &#x2713;
+            div.profile__first__description 
+                div.profile__first__description__stats 
+                        div.stats__box 
+                            h5= feed.length
+                            p Posts
+                        div.stats__box 
+                            h5= (followers instanceof Array)?followers.length:followers
+                            p Followers
+                        div.stats__box 
+                            h5= (followings instanceof Array)?followings.length:followings
+                            p Following
+                        if user 
+                            div.pencil 
+                                if user
+                                    if user.email == profileUser.email
+                                        button.pencil__button &#9998;
+                                        button.pencil__save(style="display:none") save
+                                 
+                textarea(name="bio", rows="5", readOnly="true", onchange="", placeholder="tap the pencil to update/enter bio").profile__description= profileUser.bio
+        div.profile__rule__box
+            hr.profile__rule
+            h5.profile__rule__title Stories
+        div.profile__posts
+            - for(let i=0;i<feed.length;i++){ 
+                    include _post_small
+            - }
+            //- include _post_small
+            //- include _post_small
+            //- include _post_small

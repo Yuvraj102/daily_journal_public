@@ -1,0 +1,55 @@
+extends base 
+block content 
+    div.singInPopup(id="singInPopup")
+        div.singInPopup__main 
+            a.singInPopup__main__cross(href="#first") &times; 
+            h2.singInPopup__main__text On a <span>Pursuit</span> to make your Life better !!
+            p.singInPopup__main__subText SignUp/SignIn with Google for free, Hope to see you on the other side, Happy journey :) 
+            if user
+                a.singInPopup__main__link(href="/feed") Feed Page
+            else 
+                a.singInPopup__main__link(href=googleLoginUrl) Google SignIn/SignUp
+
+    section.first(id="first")
+        //- div.first__brandName
+        //-     a.first__brandName__link(href="/") Daily Journal
+        //-          img.first__brandName__img(src="/daily_journal/android-chrome-192x192.png", alt="")
+        div.first__mainText
+            h1.mainText__headline Redefine Journaling 
+            h3.mainText__subheadline Discover how Daily Journal allows you to capture life as you go. Allow me to show you around, it's a free ride 
+                if user 
+                    a.mainText__subheadline__loginLink(href="/feed") Feed
+                else
+                    a.mainText__subheadline__loginLink(href="#singInPopup") Login/Register
+                
+    
+    section.second(id="second")
+        div.second__textContainer
+            h2.second__mainText Simple to use, Easy to Love 
+            p.second__subText Journaling can help aid different sectors of your mind Manage Anxiety, Reduce Stress, Cope with depression, Prioritize problems, fears, concerns, positive self-talk .
+            br
+            p.second__subText.second__subText--2 Journaling can help aid different sectors of your mind Manage Anxiety, Reduce Stress, Cope with depression, Prioritize problems, fears, concerns, positive self-talk .
+        div.second__imgContainer 
+            img.second__imgContainer__img(src="/img/lady-under-lamp.png", alt="")
+    
+    section.three(id="three")
+        ul.three__ul
+            li.three__li
+                <i class="fa fa-globe" id="three__li__icon" aria-hidden="true"></i> 
+                h4 Explore People around 
+                p Make your connections share and share your stories with others, Keep up the spirit
+            li.three__li
+                <i class="fa fa-book" id="three__li__icon" aria-hidden="true"></i> 
+                h4 Keep Writing
+                p Make your connections share and share your stories with others, Keep up the spirit
+            li.three__li
+                <i class="fa fa-heart" id="three__li__icon" aria-hidden="true"></i> 
+                h4 Embrace Yourself 
+                p Make your connections share and share your stories with others, Keep up the spirit
+            li.three__li
+                <i class="fa fa-comments" id="three__li__icon" aria-hidden="true"></i> 
+                h4 Chat and Sort 
+                p Let's hold each other's hand in their journey, problems tend to appear piece of cake when together, Find like minded people
+        footer.three__footer 
+            h3 We Appreciate Your trust in us 
+            p This journaling platform is still in beta version, We are heard at work in optimising it for better performance, Signup for free and later we would like to know your feedback, &copy; You are not allowed to copy anything from this site, Respect everyone in the community  T&C.

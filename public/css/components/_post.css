@@ -1,0 +1,79 @@
+.post__small {
+  display: flex;
+  padding: 1.3rem;
+}
+.post__small__img {
+  padding: 1rem;
+}
+.post__small__textBox {
+  flex: 1;
+}
+.post__link {
+  text-decoration: none;
+  color: black;
+}
+.post__small__img img {
+  height: 7.5rem;
+  width: 7.5rem;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+.post__small__textBox h2 {
+  font-size: 2.7rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 600;
+}
+.post__small__textBox p {
+  font-size: 1.7rem;
+}
+/* accessories */
+.post__small__textBox__accessories {
+  display: flex;
+}
+.icons__icon {
+  height: 2.5rem;
+  width: 2.4rem;
+  margin: 0.1rem 0.5rem;
+}
+.post__imgs {
+  flex: 1;
+  text-align: center;
+}
+.post__imgs > img {
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  transition: all 0.3s;
+  object-fit: cover;
+}
+
+.post__imgs--1 {
+}
+.post__imgs--2 {
+  margin-left: -2.5rem;
+}
+.post__imgs--3 {
+  margin-left: -2.5rem;
+}
+.post__imgs--4 {
+  margin-left: -2.5rem;
+}
+.post__imgs:hover > img {
+  margin: 0 -0.8rem;
+}
+.post__title {
+  font-weight: 600;
+  font-family: monospace;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: bisque;
+}
+.icons__icon__delete {
+  text-align: center;
+}
+.icons__icon__delete > a {
+  color: transparent;
+  font-size: 1.5rem;
+  background-image: linear-gradient(45deg, red, black);
+  -webkit-background-clip: text;
+}

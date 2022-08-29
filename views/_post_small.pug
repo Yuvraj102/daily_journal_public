@@ -1,0 +1,30 @@
+
+div.post__small 
+    div.post__small__img 
+        a.post__link(href="/profile/"+feed[i].postedPerson.email) 
+            img(src=feed[i].postedPerson.profilePhotoUrl,alt="placeholder") 
+    div.post__small__textBox 
+        a.post__link(href="/post/"+feed[i]._id) 
+            h2= feed[i].postedPerson.displayName
+            p.post__title= feed[i].title
+            p= feed[i].body.substr(0,224)
+        div.post__small__textBox__accessories
+            div.icons 
+                a(href="/post/"+feed[i]._id+"#commentForm")
+                    svg.icons__icon 
+                        use(xlink:href="/img/sprite.svg#icon-heart")
+                    
+                a(href="/post/"+feed[i]._id+"#commentForm") 
+                    svg.icons__icon 
+                        use(xlink:href="/img/sprite.svg#icon-typing")
+                svg.icons__icon 
+                    use(xlink:href="/img/sprite.svg#icon-export")
+            div.post__imgs
+                - for(let z=0; z < feed[i].images.length; z++){
+                        img.post__imgs--1(src=feed[i].images[z], alt="")
+                - }
+                //- img.post__imgs--1(src="/img/sample/sample1.jpeg", alt="")
+                //- img.post__imgs--2(src="/img/sample/sample2.jpeg", alt="")
+                //- img.post__imgs--3(src="/img/sample/sample3.jpeg", alt="")
+                //- img.post__imgs--4(src="/img/sample/sample4.jpeg", alt="")
+    

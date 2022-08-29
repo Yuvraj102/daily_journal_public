@@ -1,0 +1,26 @@
+div.first__brandName
+            a.first__brandName__link(href="/") Daily Journal
+                 img.first__brandName__img(src="/daily_journal/android-chrome-192x192.png", alt="")
+header.header
+    div.navigation
+        input.navigation__checkbox(type="checkbox", id="check")
+        label.nvaigation__label(for="check")
+            span.navigation__arrow
+
+        div.navigation__background 
+        nav.navigation__nav
+            ul.navigation__list
+                li.navigation__item 
+                    a.navigation__link(href="/") Home
+                if user
+                    li.navigation__item 
+                        a.navigation__link(href="/feed") Feed
+                    li.navigation__item 
+                        a.navigation__link(href="/profile/"+user.email) Profile
+                    li.navigation__item 
+                        a.navigation__link(href="/create") Create
+                    li.navigation__item 
+                        a.navigation__link(href="/auth/logout") Logout
+   
+                            
+                        

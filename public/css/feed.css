@@ -1,0 +1,12 @@
+.feeds {
+  min-height: 100vh;
+}
+.feed__row {
+  background-color: #ed4c4c;
+  height: 1rem;
+  border: none;
+  width: 95%;
+  margin: 0 auto;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+  margin-top: 10rem;
+}

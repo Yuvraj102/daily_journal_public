@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="icon", href="/daily_journal/apple-touch-icon.png")
+        //- FONTS
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        //- CSS
+        link(rel="stylesheet", href="/css/base.css")
+        link(rel="stylesheet", href="/css/components/_header.css")
+        link(rel="stylesheet", href="/css/home.css")
+        link(rel="stylesheet", href="/css/feed.css")
+        link(rel="stylesheet", href="/css/profile.css")
+        link(rel="stylesheet", href="/css/Post.css")
+        link(rel="stylesheet", href="/css/create.css")
+        link(rel="stylesheet", href="/css/components/_post.css")
+        link(rel="stylesheet", href="/css/components/_post_big.css")
+        link(rel="stylesheet", href="/css/components/_comment.css")
+            //- font-awesome
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+        //- JS 
+        script(src="/js/base.js", defer) 
+        title Daily Journal | #{title}
+    body    
+        include _header
+        block content 
+        include _footer

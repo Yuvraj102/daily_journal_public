@@ -1,0 +1,13 @@
+div.comment__big 
+    div.comment__big__img 
+        a.comment__big__link(href="/profile/"+comments[c].postedByPerson.email) 
+            img(src=comments[c].postedByPerson.profilePhotoUrl,alt="placeholder") 
+    div.comment__big__textBox 
+        a.comment__OwnerProfileLink(href="/profile/"+comments[c].postedByPerson.email) 
+            h2= comments[c].postedByPerson.displayName
+        p= comments[c].body
+        div.comment__big__textBox__accessories
+            div.icons 
+                svg.icons__icon 
+                    use(xlink:href="/img/sprite.svg#icon-heart")
+            

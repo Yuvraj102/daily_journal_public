@@ -1,0 +1,23 @@
+.PostBig {
+  min-height: 100vh;
+  margin-top: 10rem;
+}
+.comments {
+  margin-top: 5rem;
+}
+.form__container {
+  width: 90%;
+  margin: auto;
+  margin-top: 10rem;
+}
+.form__container textarea {
+  border: 0.2rem solid rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+.form__container button {
+  border: none;
+  box-shadow: 0px 0.5px 5px 2px rgba(0, 0, 0, 0.5);
+  background-color: #ed4c4c;
+  color: white;
+  text-transform: uppercase;
+}

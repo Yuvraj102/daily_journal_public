@@ -1,0 +1,161 @@
+.profile {
+  min-height: 100vh;
+}
+.profile__first {
+  margin-top: 10rem;
+}
+.profile__first__details {
+  text-align: center;
+}
+.profile__first__details > * {
+  margin: 1rem;
+}
+.profile__first__details > img {
+  height: 14.5rem;
+  width: 14.5rem;
+
+  border-radius: 50%;
+  box-shadow: 1px 3px 5px 3px rgba(0, 0, 0, 0.5);
+}
+.profile__first__details > p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: whitesmoke;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+  margin-top: 0px;
+}
+.profile__badge {
+  height: 2.5rem;
+  fill: whitesmoke;
+}
+.profile__first__details > h2 {
+  text-transform: uppercase;
+  font-size: 2.7rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  letter-spacing: 2.3px;
+  font-weight: 500;
+}
+.profile__button {
+  background-color: #fc4f4f;
+  border: none;
+  border-radius: 10rem;
+  color: aliceblue;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 1.5rem 2.5rem;
+  transition: all 0.4s;
+}
+.profile__button:disabled {
+  opacity: 0.8;
+}
+.profile__button:active {
+  transform: scale(0.9) translateY(-1px);
+}
+.profile__first__description {
+  width: 98%;
+  background-color: #f7bc80;
+  margin: auto;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+.profile__first__description__stats {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  overflow-wrap: break-word;
+}
+.stats__box {
+  text-align: center;
+  margin: 0 2.5rem 1rem 2.5rem;
+  background-color: #fc4f4f;
+  width: 14rem;
+  border: none;
+  border-radius: 1rem;
+  color: aliceblue;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 1.7rem;
+}
+.stats__box > :first-child {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+.stats__box > p {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+.profile__description {
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  height: fit-content;
+  resize: none;
+}
+.profile__description::-webkit-scrollbar {
+  width: 0 !important;
+}
+.profile__rule__box {
+  width: 100%;
+  position: relative;
+  margin-top: 3rem;
+}
+.profile__rule {
+  height: 0.6rem;
+  background-color: aliceblue;
+  box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.7);
+  border: none;
+  width: 100%;
+  position: absolute;
+}
+.profile__rule__title {
+  position: absolute;
+  font-size: 1.6rem;
+  padding: 0.7rem;
+  margin-left: 1.5rem;
+  background-color: #fc4f4f;
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  transform: translateY(-50%);
+  border-radius: 0.3rem;
+}
+.profile__posts {
+  margin-top: 5rem;
+}
+/* div that has pencil button inside it */
+.pencil {
+  display: flex;
+  flex-direction: column;
+}
+.pencil__save {
+  color: #fc4f4f !important;
+  border: none;
+  border-radius: 1rem !important;
+  font-size: 2rem !important;
+  padding: 0 0.3rem !important;
+}
+.pencil__save:active {
+  font-size: 1.8rem !important;
+  transform: translateY(1px);
+}
+.pencil button {
+  background-color: transparent;
+  border-radius: 50%;
+  height: 5rem;
+  font-size: 2rem;
+  width: 5rem;
+  color: #fc4f4f;
+}
+@media (max-width: 520px) {
+  .profile__first__description__stats {
+    flex-direction: column;
+    width: 80%;
+  }
+  .stats__box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}

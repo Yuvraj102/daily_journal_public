@@ -1,0 +1,129 @@
+.post__overlay {
+  width: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transition: all 0.4s;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 20000;
+}
+.post__img__cross {
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 5rem;
+}
+.post__img > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75vw;
+  max-height: 75vh;
+  object-fit: contain;
+}
+.post__overlay:target {
+  width: 100%;
+  visibility: visible;
+}
+.post__big {
+  display: flex;
+  padding: 1.3rem;
+}
+.post__big__img {
+  padding: 1rem;
+}
+.post__big__textBox {
+  flex: 1;
+}
+.post__big__link {
+  text-decoration: none;
+  color: black;
+}
+.post__OwnerProfileLink {
+  text-decoration: none;
+  color: black;
+}
+.post__big__img img {
+  height: 7.5rem;
+  width: 7.5rem;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+.post__big__textBox h2 {
+  font-size: 2.7rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 600;
+}
+.post__big__textBox p {
+  font-size: 2rem;
+}
+/* accessories */
+.post__big__textBox__accessories {
+  display: flex;
+}
+.icons__icon {
+  height: 2.5rem;
+  width: 2.4rem;
+  margin: 0.1rem 0.5rem;
+}
+.post__big__imgs {
+  flex: 1;
+  text-align: center;
+}
+/* updated */
+.post__big__imgs img {
+  border-radius: 12%;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
+  height: 15rem;
+  width: 15rem;
+  transition: all 0.3s;
+  object-fit: cover;
+}
+.post__big__imgs > * {
+  margin: 1rem;
+}
+.post__big__imgs--1 {
+}
+.post__big__imgs--2 {
+  /* margin-left: -2.5rem; */
+}
+.post__big__imgs--3 {
+  /* margin-left: -2.5rem; */
+}
+.post__big__imgs--4 {
+  /* margin-left: -2.5rem; */
+}
+.post__big__imgs:hover > img {
+  /* margin: 0 -0.8rem; */
+}
+.post__title__big {
+  font-weight: 600;
+  font-family: monospace;
+  font-size: 2.3rem !important;
+  font-style: italic;
+  color: bisque;
+}
+@media (max-width: 500px) {
+  .post__big__textBox__accessories {
+    flex-direction: column;
+  }
+}
+@media (max-width: 390px) {
+  /* updated */
+  .post__big__imgs img {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+@media (max-width: 290px) {
+  /* updated */
+  .post__big__imgs img {
+    height: 8rem;
+    width: 8rem;
+  }
+}

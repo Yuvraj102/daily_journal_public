@@ -1,0 +1,68 @@
+.comment__big {
+  display: flex;
+  padding: 1.3rem;
+  width: 90%;
+  margin-right: auto;
+}
+.comment__big__img {
+  padding: 1rem;
+}
+.comment__big__textBox {
+  flex: 1;
+}
+.comment__big__link {
+  text-decoration: none;
+  color: black;
+}
+.comment__OwnerProfileLink {
+  text-decoration: none;
+  color: black;
+}
+.comment__big__img img {
+  height: 6.5rem;
+  width: 6.5rem;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+.comment__big__textBox h2 {
+  font-size: 2.3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 600;
+}
+.comment__big__textBox p {
+  font-size: 1.75rem;
+}
+/* accessories */
+.comment__big__textBox__accessories {
+  display: flex;
+}
+.icons__icon {
+  height: 2.5rem;
+  width: 2.4rem;
+  margin: 0.1rem 0.5rem;
+}
+
+.comment__title__big {
+  font-weight: 600;
+  font-family: monospace;
+  font-size: 2.3rem !important;
+  font-style: italic;
+  color: bisque;
+}
+@media (max-width: 500px) {
+  .comment__big__textBox__accessories {
+    flex-direction: column;
+  }
+}
+@media (max-width: 390px) {
+  .comment__big__imgs > img {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+@media (max-width: 290px) {
+  .comment__big__imgs > img {
+    height: 8rem;
+    width: 8rem;
+  }
+}
